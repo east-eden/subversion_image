@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  
+  subversion_image:
+    image: hellodudu86/subversion_image
+    container_name: subversion
+    ports:
+      - "3690:3690"
+    volumes:
+      - "./conf:/app/svnrepo/conf"
+      - "./data/db:/app/svnrepo/db"
+      - "./data/hooks:/app/svnrepo/hooks"
+      - "./data/locks:/app/svnrepo/locks"
+    
